@@ -2825,7 +2825,6 @@ VALUES
 
 CREATE TABLE Measure (
 	id INT NOT NULL IDENTITY PRIMARY KEY,
-	IsAlive INT,
 	Height DECIMAL,
 	[Weight] DECIMAL,
 	BloodSystolic INT,
