@@ -1,0 +1,6 @@
+| DatabaseName         | SchemaName | TableName | ColumnName  | Datatype | Datalength | nRows | FHIR Resource | FHIR path (full) | KR | Comment                                                                      |
+|----------------------|------------|-----------|-------------|----------|------------|-------|---------------|------------------|----|------------------------------------------------------------------------------|
+| StillGoingStrong2000 | dbo        | Status    | Code        | nvarchar | 8000       | 4     | Encounter     | Encounter.status |    | Må mappes til en av "EncounterStatus!" vurdert sammen med Status.Description |
+| StillGoingStrong2000 | dbo        | Status    | Description | nvarchar | 8000       | 4     | Encounter     | Encounter.status |    | Må mappes til en av "EncounterStatus!" vurdert sammen med Status.Code        |
+| StillGoingStrong2000 | dbo        | Status    | id          | int      | 4          | 4     |               |                  | 4  |                                                                              |
+| StillGoingStrong2000 | dbo        | Status    | Timestamp   | datetime | 8          | 4     |               |                  | 1  |                                                                              |
