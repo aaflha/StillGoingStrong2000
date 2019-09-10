@@ -11,7 +11,7 @@ SELECT DISTINCT
 	NEXT VALUE FOR FHIR_Master.dbo.sequenceId AS 'Patient.name.HumanName.id',
 
 	p.SNN AS 'Patient.identifier.Identifier(2).value',
-	NEXT VALUE FOR FHIR_Master.dbo.sequenceId2 AS 'Patient.identifier.Identifier.value',
+	NEXT VALUE FOR FHIR_Master.dbo.sequenceId2 AS 'Patient.identifier.Identifier(2).value',
 	-- remember 'system'
 
 	p.Phone AS 'Patient.telecom.ContactPoint.value',
