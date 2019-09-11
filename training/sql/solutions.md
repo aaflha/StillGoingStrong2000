@@ -118,25 +118,34 @@ WHERE e.id = 8 AND r.id = 7;
 
 ## Exercise 11
 ```sql
-
+SELECT
+	d.ReshNum,
+	COUNT(a.id) AS 'NumberOfAdmissions'
+FROM Admission a
+LEFT JOIN Department d on a.DepartmentId = d.id
+GROUP BY d.ReshNum;
 ```
 
 ## Exercise 12
 ```sql
+SELECT TOP 1
+	d.ReshNum,
+	COUNT(a.id) AS 'NumberOfAdmissions'
+FROM Admission a
+LEFT JOIN Department d on a.DepartmentId = d.id
+GROUP BY d.ReshNum
+ORDER BY NumberOfAdmissions DESC;
 
-```
-
-## Exercise 13
-```sql
-
-```
-
-## Exercise 14
-```sql
-
-```
-
-## Exercise 15
-```sql
-
+-- Alternatively:
+SELECT
+	TopOne.ReshNum
+FROM (
+	SELECT TOP 1
+		d.ReshNum,
+		COUNT(a.id) AS 'NumberOfAdmissions'
+	FROM Admission a
+	LEFT JOIN Department d on a.DepartmentId = d.id
+	GROUP BY d.ReshNum
+	ORDER BY NumberOfAdmissions DESC
+) TopOne;
 ```
