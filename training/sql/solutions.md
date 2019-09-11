@@ -26,12 +26,28 @@ FROM Patient p;
 
 ## Exercise 4
 ```sql
+SELECT
+	COUNT(*)
+FROM Patient p
+WHERE LEFT(p.FirstName, 1) = 'E';
 
+-- And these are the names:
+SELECT
+	p.FirstName
+FROM Patient p
+WHERE LEFT(p.FirstName, 1) = 'E';
 ```
 
 ## Exercise 5
 ```sql
-
+SELECT
+	a.id,
+	a.StatusId,
+	s.Code,
+	s.[Description]
+FROM Admission a
+LEFT JOIN [Status] s ON a.StatusId = s.id
+WHERE a.id = 100;
 ```
 
 ## Exercise 6
