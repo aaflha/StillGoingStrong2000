@@ -39,7 +39,22 @@ GROUP BY column_name(s);
 
 # JOINS
 
-Imagine we have 2 tables; table1 and table2:
+Imagine we have 2 tables; table1 and table2.
+`table1`:
+| m  | f |
+|----|---|
+| a1 | 1 |
+| a2 | 2 |
+| a3 | 3 |
+| a4 | 4 |
+
+`table2`:
+| n  | f |
+|----|---|
+| b1 | 1 |
+| b2 | 2 |
+| b5 | 5 |
+| b7 | 7 |
 
 
 ## LEFT JOIN
@@ -51,6 +66,13 @@ LEFT JOIN table2 ON table1.column_name = table2.column_name;
 ```
 ![alt text](https://www.w3schools.com/sql/img_leftjoin.gif "Title Text")
 
+| table1.m | table1.f | table2.n | table2.f |
+|----------|----------|----------|----------|
+| a1       | 1        | b1       | 1        |
+| a2       | 2        | b2       | 2        |
+| a3       | 3        | NULL     | NULL     |
+| a4       | 4        | NULL     | NULL     |
+
 ## INNER JOIN
 ```sql
 SELECT 
@@ -60,6 +82,11 @@ INNER JOIN table2 ON table1.column_name = table2.column_name;
 ```
 ![alt text](https://www.w3schools.com/sql/img_innerjoin.gif "Title Text")
 
+| table1.m | table1.f | table2.n | table2.f |
+|----------|----------|----------|----------|
+| a1       | 1        | b1       | 1        |
+| a2       | 2        | b2       | 2        |
+
 ## FULL OUTER JOIN
 ```sql
 SELECT 
@@ -68,3 +95,12 @@ FROM table1
 FULL OUTER JOIN table2 ON table1.column_name = table2.column_name;
 ```
 ![alt text](https://www.w3schools.com/sql/img_fulljoin.gif "Title Text")
+
+| table1.m | table1.f | table2.n | table2.f |
+|----------|----------|----------|----------|
+| a1       | 1        | b1       | 1        |
+| a2       | 2        | b2       | 2        |
+| a3       | 3        | NULL     | NULL     |
+| a4       | 4        | NULL     | NULL     |
+| NULL     | NULL     | b5       | 5        |
+| NULL     | NULL     | b7       | 7        |
