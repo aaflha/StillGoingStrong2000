@@ -40,7 +40,9 @@ GROUP BY column_name(s);
 # JOINS
 
 Imagine we have 2 tables; table1 and table2.
+
 `table1`:
+
 | m  | f |
 |----|---|
 | a1 | 1 |
@@ -48,7 +50,9 @@ Imagine we have 2 tables; table1 and table2.
 | a3 | 3 |
 | a4 | 4 |
 
+
 `table2`:
+
 | n  | f |
 |----|---|
 | b1 | 1 |
