@@ -1,1 +1,1 @@
-mapping performed in a hurry, typos and/or error are likely
+mapping performed in a hurry, typos and/or errors are likely present atm
