@@ -44,35 +44,76 @@ SELECT
 	a.id,
 	a.StatusId,
 	s.Code,
-	s.[Description]
+	s.Description
 FROM Admission a
-LEFT JOIN [Status] s ON a.StatusId = s.id
+LEFT JOIN Status s ON a.StatusId = s.id
 WHERE a.id = 100;
 ```
 
 ## Exercise 6
 ```sql
-
+SELECT
+	a.id,
+	e.FirstName,
+	e.LastName
+FROM AdmEmpRole aer
+INNER JOIN Admission a ON aer.AdmissionId = a.id
+INNER JOIN Employee e ON aer.EmployeeId = e.id
+WHERE a.id = 500;
 ```
 
 ## Exercise 7
 ```sql
-
+SELECT
+	a.id,
+	e.FirstName,
+	e.LastName,
+	r.Description
+FROM AdmEmpRole aer
+INNER JOIN Admission a ON aer.AdmissionId = a.id
+INNER JOIN Employee e ON aer.EmployeeId = e.id
+INNER JOIN Role r ON aer.RoleId = r.id
+WHERE a.id = 500;
 ```
 
 ## Exercise 8
 ```sql
-
+SELECT
+	a.id,
+	e.FirstName,
+	e.LastName,
+	r.Description,
+	p.FirstName,
+	p.LastName
+FROM AdmEmpRole aer
+INNER JOIN Admission a ON aer.AdmissionId = a.id
+INNER JOIN Employee e ON aer.EmployeeId = e.id
+INNER JOIN Role r ON aer.RoleId = r.id
+INNER JOIN Patient p ON a.PatientId = p.id
+WHERE a.id = 500;
 ```
 
 ## Exercise 9
 ```sql
-
+SELECT
+	COUNT(*)
+From AdmEmpRole aer
+INNER JOIN Employee e ON aer.EmployeeId = e.id
+INNER JOIN Role r ON aer.RoleId = r.id
+WHERE e.id = 8 AND r.id = 7;
 ```
 
 ## Exercise 10
 ```sql
-
+SELECT DISTINCT
+	p.FirstName,
+	p.LastName
+From AdmEmpRole aer
+INNER JOIN Employee e ON aer.EmployeeId = e.id
+INNER JOIN Role r ON aer.RoleId = r.id
+INNER JOIN Admission a ON aer.AdmissionId = a.id
+INNER JOIN Patient p ON a.PatientId = p.id
+WHERE e.id = 8 AND r.id = 7;
 ```
 
 ## Exercise 11
