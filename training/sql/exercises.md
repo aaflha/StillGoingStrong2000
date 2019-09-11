@@ -10,3 +10,5 @@
 8. Which employees were involved in the 500th Admission (`Admission.id` = 500), what were their roles and who did they treat?
 9. How many times have the employee 'Pok Emon' filled the role as 'Noob'?
 10. Which patients have been treated by employee 'Pok Emon' having the role as 'Noob'?
+11. How many admissions have been registered on the different departments?
+12. What is the `ReshNum` for the department which have the most registered admissions?
