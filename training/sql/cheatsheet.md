@@ -64,9 +64,12 @@ Imagine we have 2 tables; table1 and table2.
 ## LEFT JOIN
 ```sql
 SELECT 
-  column_name(s)
+  table1.m,
+  table1.f,
+  table2.n,
+  table2.f
 FROM table1
-LEFT JOIN table2 ON table1.column_name = table2.column_name;
+LEFT JOIN table2 ON table1.f = table2.f;
 ```
 ![alt text](https://www.w3schools.com/sql/img_leftjoin.gif "Title Text")
 
@@ -80,9 +83,12 @@ LEFT JOIN table2 ON table1.column_name = table2.column_name;
 ## INNER JOIN
 ```sql
 SELECT 
-  column_name(s)
+  table1.m,
+  table1.f,
+  table2.n,
+  table2.f
 FROM table1
-INNER JOIN table2 ON table1.column_name = table2.column_name;
+INNER JOIN table2 ON table1.f = table2.f;
 ```
 ![alt text](https://www.w3schools.com/sql/img_innerjoin.gif "Title Text")
 
@@ -94,9 +100,12 @@ INNER JOIN table2 ON table1.column_name = table2.column_name;
 ## FULL OUTER JOIN
 ```sql
 SELECT 
-  column_name(s)
+  table1.m,
+  table1.f,
+  table2.n,
+  table2.f
 FROM table1
-FULL OUTER JOIN table2 ON table1.column_name = table2.column_name;
+FULL OUTER JOIN table2 ON table1.f = table2.f;
 ```
 ![alt text](https://www.w3schools.com/sql/img_fulljoin.gif "Title Text")
 
