@@ -1,6 +1,6 @@
 # FUNDAMENTAL SYNTAX
 
-## SELECT
+### SELECT
 ```sql
 SELECT 
   column1, 
@@ -9,7 +9,7 @@ SELECT
 FROM table_name;
 ```
 
-## WHERE
+### WHERE
 ```sql
 SELECT 
   column1, 
@@ -19,7 +19,7 @@ FROM table_name
 WHERE condition;
 ```
 
-## ORDER BY
+### ORDER BY
 ```sql
 SELECT 
   column1, 
@@ -29,7 +29,7 @@ FROM table_name
 ORDER BY column1, column2, ... ASC|DESC;
 ```
 
-## GROUP BY
+### GROUP BY
 ```sql
 SELECT 
   column_name(s) -- often used with aggregate functions (COUNT, MAX, MIN, SUM, ...)
@@ -61,7 +61,7 @@ Imagine we have 2 tables; table1 and table2.
 | b7 | 7 |
 
 
-## LEFT JOIN
+### LEFT JOIN
 ```sql
 SELECT 
   table1.m,
@@ -80,7 +80,7 @@ LEFT JOIN table2 ON table1.f = table2.f;
 | a3       | 3        | NULL     | NULL     |
 | a4       | 4        | NULL     | NULL     |
 
-## INNER JOIN
+### INNER JOIN
 ```sql
 SELECT 
   table1.m,
@@ -97,7 +97,7 @@ INNER JOIN table2 ON table1.f = table2.f;
 | a1       | 1        | b1       | 1        |
 | a2       | 2        | b2       | 2        |
 
-## FULL OUTER JOIN
+### FULL OUTER JOIN
 ```sql
 SELECT 
   table1.m,
